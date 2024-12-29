@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page | Auth Project</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Dancing+Script:wght@400..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+    <style> 
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: "Roboto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .form-container{
+            border: 2px solid #4437B8;
+            height: 500px;
+            width: 70%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            gap: 50px;
+        }
+        .heading{
+            margin-top: 50px;
+            border-bottom: 2px solid #4437B8;
+            margin-bottom: 0px;
+        }
+        .heading h2{
+            margin: 10px;
+        }   
+        .name input, .email input, .password input{
+            padding: 15px 40px;
+            width: 70%;
+            outline: none;
+            border: 1px solid #4437B8;
+            margin: 10px;
+            border-radius: 30px;
+        }
+        .button{
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button button{
+            background-color: #4437B8;
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+        .login-option{
+            text-align: center;
+            margin: 15px;
+        }
+        .login-option a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="heading">
+            <h2>Signup</h2>
+        </div>
+        <div class="form">
+            <form method="post" action="http://localhost:8080/signup">
+                <div class="name">
+                    <input type="text" name="name" placeholder="Enter Name" required>
+                </div>
+                <div class="email">
+                    <input type="email" name="email" placeholder="abc@gmail.com" required>
+                </div>
+                <div class="password">
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <div class="button">
+                    <button>Submit</button>
+                </div>
+                <div class="login-option">
+                    <p>Already have an account ? <a href="http://localhost:8080/login">login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
