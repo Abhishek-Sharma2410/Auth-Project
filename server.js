@@ -48,7 +48,9 @@ app.post('/auth', (req, res)=>{
         if(result.length==0){
             res.render("error.ejs");
         }
-        res.render("userInfo.ejs", {user : result[0]});
+        let userName = result[0].name;
+        let user = userName.charAt(0);
+        res.render("userInfo.ejs", {user2 : result[0], user});
     })
 });
 
